@@ -6,3 +6,8 @@
  * Create a select statement that lists the titles of all tables with the 'Trailers' special_feature.
  * Inner join the queries above.
  */
+
+select title
+from film
+where 'Trailers' = any(special_features) and 'Behind the Scenes' = any(special_features)
+order by title;
